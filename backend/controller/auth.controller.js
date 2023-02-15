@@ -55,7 +55,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-const VerifyUser = async (req, res) => {
+const Verify = async (req, res) => {
   if (req.headers.authorization) {
     try {
       await jwt.verify(
@@ -74,4 +74,4 @@ const VerifyUser = async (req, res) => {
     res.status(404).send("Authentication required");
   }
 };
-module.exports = { signupUser, loginUser, VerifyUser };
+module.exports = { signupUser, loginUser, Verify };
