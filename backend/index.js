@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const connect = require("./config/db");
+const { userRoutes } = require("./routes/user.routes");
+const { commentRoutes } = require("./routes/comment.routes");
 require("dotenv").config();
 
 const app = express();
@@ -11,6 +13,9 @@ connect();
 
 app.use(cors());
 app.use(express.json());
+
+app.use(userRoutes);
+app.use(commentRoutes);
 
 app.get("/", (req, res) => {
   res.send("hello mfs");
