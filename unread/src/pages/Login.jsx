@@ -1,61 +1,18 @@
 import React from "react";
-import sideBackground from "../Assets/side.png"
+import "../styles/login.css"
 export const Login = () => {
     return (
         <>
-            <div style={{
-                display: "flex",
-                borderRadius: "25px",
-                backgroundColor: "white",
-                boxShadow: "0px 0px 15px -10px",
-                height: "80%",
-                width: "60%",
-                overflow: "hidden"
-            }}>
-                <div style={{
-                    width: "45%",
-                    backgroundImage: `url(${sideBackground})`,
-                    backgroundPositionX: "0",
-                    backgroundSize: "120%"
-                }}></div>
-                <div style={{
-                    width: "55%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "30px"
-                }}>
-                    <h2 style={{
-                        margin: "0",
-                        color: "#30D5C8"
-                    }}>Log in</h2>
-                    <input style={{
-                        outline: "none",
-                        padding: "10px",
-                        borderRadius: "25px",
-                        boxShadow: "0px 0px 15px -8px",
-                        border: "none"
-                    }} type="text" placeholder="Email" />
-                    <input style={{
-                        outline: "none",
-                        padding: "10px",
-                        borderRadius: "25px",
-                        boxShadow: "0px 0px 15px -8px",
-                        border: "none"
-                    }} type="text" placeholder="Password" />
-                    <button style={{ outline: "none",
-                        padding: "10px",
-                        borderRadius: "25px",
-                        boxShadow: "0px 0px 15px -8px",
-                        border: "none", 
-                        color: "white",
-                        backgroundColor: "#30D5C8",
-                        paddingLeft: "30px",
-                        paddingRight: "30px",
-                        fontSize: "20px"}}>
+            <div className="sign-up-container" >
+                <div className="left-side-background"></div>
+                <div className="email-pass-etc">
+                    <h2>Log in</h2>
+                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Password" />
+                    <button className="signup-button">
                         Log in
                     </button>
+                    <a href="/signup">Don't have an account?</a>
                 </div>
             </div>
         </>
