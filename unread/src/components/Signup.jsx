@@ -1,5 +1,4 @@
 import React from "react";
-import sideBackground from "../assets/side.png"
 import "../style/signup.css"
 export const Signup = () => {
     return (
