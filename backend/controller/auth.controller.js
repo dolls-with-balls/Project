@@ -1,6 +1,7 @@
 const { User } = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const signupUser = async (req, res) => {
   const { username, password, passwordConfirm, email, roles } = req.body;
@@ -54,7 +55,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-const Verify = async (req, res) => {
+const VerifyUser = async (req, res) => {
   if (req.headers.authorization) {
     try {
       await jwt.verify(
@@ -73,4 +74,4 @@ const Verify = async (req, res) => {
     res.status(404).send("Authentication required");
   }
 };
-module.exports = { signupUser, loginUser, Verify };
+module.exports = { signupUser, loginUser, VerifyUser };

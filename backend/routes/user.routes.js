@@ -3,6 +3,7 @@ const {
   signupUser,
   loginUser,
   Verify,
+  VerifyUser,
 } = require("../controller/auth.controller");
 const {
   deleteUser,
@@ -15,7 +16,7 @@ const router = express.Router();
 router
   .get("/users", getUsers)
   .get("/user/:id", getUser)
-  .get("/verify", Verify)
+  .get("/verify", VerifyUser)
   .post("/signup", signupUser)
   .post("/login", loginUser)
   .delete("/user/:id", deleteUser);
