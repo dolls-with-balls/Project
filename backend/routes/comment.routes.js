@@ -4,12 +4,13 @@ const {
   deleteComment,
   getComments,
 } = require("../controller/comment.controller");
+const { roleMiddleware } = require("../middlewares/roleMiddleware");
 
 const router = express.Router();
 
 router
-  .get("/comments", getComments)
+  .get("/comments", roleMiddleware, getComments)
   .post("/create", createComment)
-  .delete("/comment/:id", deleteComment);
+  .delete("/comment/:id", roleMiddleware, deleteComment);
 
 module.exports.commentRoutes = router;

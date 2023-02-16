@@ -10,7 +10,7 @@ const deleteUser = async (req, res) => {
   }
 };
 
-const getUsers = async (req, res) => {
+const getUsers = async (_req, res) => {
   try {
     const result = await User.find({}); //populate("posts")
     res.send(result);
