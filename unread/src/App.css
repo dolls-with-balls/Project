@@ -3,7 +3,7 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-image: url("./Assets/body.webp");
+  background-image: url("./assets/body.webp");
   background-size: cover;
 }
 #root {
@@ -11,5 +11,5 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }

@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Login } from "./components/Login";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/footer" element={<Footer/>}/>
         </Routes>
       </BrowserRouter>
     </>
