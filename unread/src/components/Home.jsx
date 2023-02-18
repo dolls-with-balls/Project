@@ -23,6 +23,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+      {/* <Header/> */}
     </div>
   );
 };
