@@ -7,7 +7,10 @@ export const Home = () => {
     <div className={style.container}>
       {/* <Header/> */}
       <div className={style.innerContainer}>
-        <Link to="/news/1g3g5g35gy" style={{display : "flex" , textDecoration : "none"}}>
+        <Link
+          to="/news/1g3g5g35gy"
+          style={{ display: "flex", textDecoration: "none" }}
+        >
           <div className={style.imgContainer}>
             <img src={home} className={style.img} alt="home" />
           </div>
