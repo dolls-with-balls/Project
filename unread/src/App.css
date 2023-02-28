@@ -3,13 +3,14 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/body.webp");
+  background-image: url("./assets/body.png");
   background-size: cover;
+  box-shadow: inset rgba(0, 0, 0, 0.583) 0px 0px 1000px 100px;
 }
 #root {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
 }
