@@ -2,6 +2,12 @@ import styles from "../style/footer.module.css";
 import logo from "../assets/logo.png";
 import apple from "../assets/apple.png";
 import samsung from "../assets/samsung.png";
+import { AiFillFacebook } from "react-icons/ai";
+import { IoLogoTwitter } from "react-icons/io";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { AiFillYoutube } from "react-icons/ai";
+import { GrSoundcloud } from "react-icons/gr";
 
 export const Footer = () => {
   return (
@@ -71,7 +77,7 @@ export const Footer = () => {
             </div>
             <div className={styles.bulan}>
               <div className={styles.zuun}>
-                <div className={styles.p2}>Булангууд</div>
+                <h5 style={{ color: "#0078f6" }}>Булангууд</h5>
                 <div className={styles.p2}>Онцлох бизнес</div>
                 <div className={styles.p2}>Techworm</div>
                 <div className={styles.p2}>Би хэрхэн ажилладаг вэ?</div>
@@ -83,12 +89,43 @@ export const Footer = () => {
                 <div className={styles.p2}>Аравт</div>
                 <div className={styles.p2}>Тогтвортой хөгжил</div>
               </div>
-              <div className={styles.gol}></div>
-              <div className={styles.baruun}></div>
+              <div className={styles.gol}>
+                <div className={styles.p2}>Тайлбарлах нь</div>
+                <div className={styles.p2}>А-Я</div>
+                <div className={styles.p2}>10 ертөнц, 10 өнцөг </div>
+                <div className={styles.p2}>Би хүүхдээ ингэж өсгөдөг </div>
+                <div className={styles.p2}>Танилц, миний амьтан</div>
+                <div className={styles.p2}>Таатай оффис</div>
+                <div className={styles.p2}>Зочин нийтлэлчийн булан</div>
+                <div className={styles.p2}>8 минутын улс төр</div>
+                <div className={styles.p2}>Study Hacks</div>
+              </div>
+              <div className={styles.baruun}>
+                <h5 style={{ color: "#0078f6" }}>Компани</h5>
+                <p className={styles.p4}>
+                  Улаанбаатар 14240 <br /> СБД, 8-р хороо,Амарын <br /> гудамж,
+                  <br />
+                  Тэнгэрлиг медиа групп
+                </p>
+                <div className={styles.p4}>+976 99111111</div>
+                <div className={styles.p4} style={{ paddingTop: 30 }}>
+                  Зочлох:
+                </div>
+                <a className={styles.link} href="http://www.unread.media/">
+                  www.unread.media
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          <AiFillFacebook className={styles.facebook}></AiFillFacebook>
+          <IoLogoTwitter id={styles.twitter}></IoLogoTwitter>
+          <AiOutlineInstagram id={styles.ig}></AiOutlineInstagram>
+          <FaLinkedinIn id={styles.in}></FaLinkedinIn>
+          <AiFillYoutube id={styles.yt}></AiFillYoutube>
+          <GrSoundcloud id={styles.sc}></GrSoundcloud>
+        </div>
       </div>
     </>
   );

@@ -1,10 +1,12 @@
 .all {
   width: 100vw;
-  height: 600px;
+  height: 800px;
   background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 100px;
 }
 .btn {
   border-radius: 15px;
@@ -43,7 +45,7 @@
 }
 .top{
   display: flex;
-  gap: 50px;
+  gap: 100px;
 }
 .p3{
   color: gray;
@@ -52,8 +54,104 @@
 }
 .p2{
   color: gray;
+  transition: 300ms;
+  font-size: 12px;
 }
 .p2:hover{
   color: white;
   padding-left: 10px;
+  transition: 300ms;
+}
+.zuun{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.bulan{
+  display: flex;
+  gap: 50px;
+}
+.gol{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 75px;
+}
+.p4{
+  color: gray;
+  font-size: 12px;
+  line-height: 20px;
+}
+.link{
+  color: white;
+  transition: 300ms;
+  font-size: 12px;
+  text-decoration: none;
+  padding-top: 15px;
+}
+.link:hover{
+  padding-left: 10px;
+  transition: 300ms;
+  
+}
+.baruun{
+  display: flex;
+  flex-direction: column;
+}
+.bottom{
+  display: flex;
+  gap: 200px;
+}
+.facebook{
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+.facebook:hover{
+  color: #3f729b;
+}
+#twitter{
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+#twitter:hover{
+  color:#1da2f2;
+}
+#ig{
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+#ig:hover{
+  color: rgb(214, 6, 214) ;
+}
+#in{
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+#in:hover{
+  color: #0077b5 ;
+}
+#yt{
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+#yt:hover{
+  color: red ;
+}
+#sc{
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+#sc:hover{
+  color: #f50 ;
 }
