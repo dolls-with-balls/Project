@@ -3,7 +3,7 @@
   flex-direction: column;
   margin-top: 150px;
   width: 100%;
-  height: 110vh;
+  height: 300vh;
 }
 
 .titleContainer {
@@ -64,6 +64,12 @@
   font-weight: 600;
 }
 
+.leftSide {
+  display: flex;
+  justify-content: space-between;
+  width: 490px;
+}
+
 .reviewSection {
   display: flex;
   flex-direction: column;
@@ -87,4 +93,39 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+
+.mainNewsSection {
+  margin: 50px 0 100px 0;
+  display: flex;
+  width: 90%;
+}
+
+.mainNews {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin: 0 0 50px 200px;
+  font-weight: 600;
+}
+
+.texts {
+  display: flex;
+  width: 560px;
+}
+
+.commentSection {
+  display: flex;
+  padding: 50px 0 50px 0;
+  background-color: #f6f6f6;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
