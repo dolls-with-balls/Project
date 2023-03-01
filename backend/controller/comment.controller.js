@@ -9,6 +9,10 @@ const createComment = async (req, res) => {
         creator,
       }).save();
       res.send(comment);
+<<<<<<< HEAD
+=======
+      console.log(comment);
+>>>>>>> 244ab5dbe1fec89b047e7b140bcf779401c54819
     }
   } catch (err) {
     res.status(404).send("error zaalaa");

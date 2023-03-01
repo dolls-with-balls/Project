@@ -1,6 +1,10 @@
 const { User } = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+<<<<<<< HEAD
+=======
+require("dotenv").config();
+>>>>>>> 244ab5dbe1fec89b047e7b140bcf779401c54819
 
 const signupUser = async (req, res) => {
   const { username, password, passwordConfirm, email, roles } = req.body;
@@ -54,7 +58,11 @@ const loginUser = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 const Verify = async (req, res) => {
+=======
+const VerifyUser = async (req, res) => {
+>>>>>>> 244ab5dbe1fec89b047e7b140bcf779401c54819
   if (req.headers.authorization) {
     try {
       await jwt.verify(
@@ -73,4 +81,8 @@ const Verify = async (req, res) => {
     res.status(404).send("Authentication required");
   }
 };
+<<<<<<< HEAD
 module.exports = { signupUser, loginUser, Verify };
+=======
+module.exports = { signupUser, loginUser, VerifyUser };
+>>>>>>> 244ab5dbe1fec89b047e7b140bcf779401c54819

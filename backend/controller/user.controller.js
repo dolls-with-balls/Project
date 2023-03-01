@@ -10,7 +10,11 @@ const deleteUser = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 const getUsers = async (req, res) => {
+=======
+const getUsers = async (_req, res) => {
+>>>>>>> 244ab5dbe1fec89b047e7b140bcf779401c54819
   try {
     const result = await User.find({}); //populate("posts")
     res.send(result);
