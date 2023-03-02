@@ -6,10 +6,10 @@ body {
   background-image: url("./Assets/body.webp");
   background-size: cover;
 }
-#root {
+/* #root {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
