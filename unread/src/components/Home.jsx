@@ -1,33 +1,42 @@
 import style from "../designs/Home.module.css";
-import home from "../assets/Home.png";
-import { Link } from "react-router-dom";
+import newsImg from "../assets/unread2.png";
+import newsImg2 from "../assets/unread.png";
+import profile from "../assets/unread3.jpeg";
 
 export const Home = () => {
   return (
     <div className={style.container}>
       {/* <Header/> */}
+      <div className={style.backG}>
+        <img
+          src={newsImg}
+          alt="backG"
+          style={{ width: "100%", opacity: "0.35" }}
+        />
+        <div className={style.gradient} />
+      </div>
       <div className={style.innerContainer}>
-        {/* <Link
-          to="/news/1g3g5g35gy"
-          style={{ display: "flex", textDecoration: "none" }}
-        > */}
         <div className={style.imgContainer}>
-          <img src={home} className={style.img} alt="home" />
+          <img src={newsImg2} alt="newsImg" className={style.img} />
         </div>
-        <div className={style.textContainer}>
-          <div className={style.text2}>
-            <div>Brand New</div>
+        <div className={style.titleSection}>
+          <div className={style.glowingTitle}>Өнөөдөр</div>
+          <div className={style.title}>TECHWORM</div>
+          <div className={style.title2}>
+            Апп тойм: Ask Y - Чанартай боловсролыг сурагч бүрд
           </div>
-          <div className={style.text}>
-            "The Apprentice" цуврал #10: Шилдэг таван оролцогчийн өрсөлдөөн
-          </div>
-          <div className={style.publisher}>
-            <div>image</div>
-            <div>Name</div>
-            <div>date</div>
+          <div className={style.profile}>
+            <img src={profile} alt="profile" className={style.profilePic} />
+            <div className={style.author}>
+              <div style={{ color: "grey" }}>Bully Maguire</div>
+              <div className={style.info}>
+                <div style={{ color: "white" }}>3 сарын 2, 2023 </div>
+                <span className={style.dot} />
+                <div style={{ color: "white" }}>10 мин</div>
+              </div>
+            </div>
           </div>
         </div>
-        {/* </Link> */}
       </div>
       {/* <Footer/> */}
     </div>
