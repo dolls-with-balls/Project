@@ -1,0 +1,10 @@
+.cont {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 35px;
+  max-width: 1186px;
+  width: calc(1186px - 50px);
+}                                                                       
+.spc { 
+    margin-top: 19px;
+}
