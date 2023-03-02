@@ -56,8 +56,8 @@ export const Footer = () => {
               </button>
             </div>
             <div style={{ marginTop: 50 }}>
-              <img src={apple} style={{ width: 130 }}></img>
-              <img src={samsung} style={{ width: 130, marginLeft: 20 }}></img>
+              <img src={apple} className={styles.pic1}></img>
+              <img src={samsung} className={styles.pic2}></img>
             </div>
           </div>
           <div className={styles.right}>
