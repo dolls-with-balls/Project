@@ -5,7 +5,7 @@ import newsImg2 from "../Assets/unread2.jpg";
 import comment from "../Assets/unread3.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
-import { Container, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
@@ -137,20 +137,22 @@ export const NewsDetail = () => {
             />
             <h4>Сэтгэгдэл бичих (0)</h4>
           </div>
-          <div>
-            <Form style={{ width: "400px" }}>
-              <Form.Group className="mb-3">
-                <Form.Control as="textarea" />
-              </Form.Group>
-            </Form>
-            <Button
-              variant="default"
-              color="gray"
-              style={{ width: "400px", color: "grey" }}
-            >
-              Сэтгэгдэл бичих
-            </Button>
+
+          <div className={style.inputContainer}>
+            <input placeholder="Таны нэр" type="text" className={style.input} />
+            <textarea
+              placeholder="Санал сэтгэгдэл"
+              className={style.textArea}
+            />
           </div>
+
+          <Button
+            variant="default"
+            color="gray"
+            style={{ width: "400px", color: "grey" }}
+          >
+            Сэтгэгдэл бичих
+          </Button>
         </div>
       </div>
 
