@@ -3,7 +3,7 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/body.png");
+  background-image: url("./assets/body.webp");
   background-size: cover;
   box-shadow: inset rgba(0, 0, 0, 0.583) 0px 0px 1000px 100px;
 }
