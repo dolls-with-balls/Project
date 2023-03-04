@@ -6,6 +6,7 @@ body {
   background-image: url("./assets/body.webp");
   background-size: cover;
   box-shadow: inset rgba(0, 0, 0, 0.583) 0px 0px 1000px 100px;
+  font-weight: 500;
 }
 #root {
   height: 100%;
