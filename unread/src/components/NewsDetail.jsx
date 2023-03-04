@@ -1,8 +1,8 @@
 import style from "../style/newsDetail.module.css";
-import newsImg from "../Assets/unread.png";
-import profile from "../Assets/unreadp.jpeg";
-import newsImg2 from "../Assets/unread2.jpg";
-import comment from "../Assets/unread3.png";
+import newsImg from "../assets/unread.png";
+import profile from "../assets/unreadp.jpeg";
+import newsImg2 from "../assets/unread2.jpg";
+import comment from "../assets/unread3.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import { Container } from "react-bootstrap";
@@ -123,7 +123,6 @@ export const NewsDetail = () => {
                   гаруй багш нараас тодорхой хариултуудыг авах боломжтой.
                 </div>
               </div>
-
               <img src={newsImg2} alt="newsImg2" className={style.img} />
             </div>
           </div>
@@ -135,7 +134,7 @@ export const NewsDetail = () => {
               alt="comment"
               style={{ width: "30px", height: "30px" }}
             />
-            <h4>Сэтгэгдэл бичих (0)</h4>
+            <h5>Сэтгэгдэл бичих (0)</h5>
           </div>
 
           <div className={style.inputContainer}>
