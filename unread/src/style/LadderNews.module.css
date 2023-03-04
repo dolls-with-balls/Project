@@ -28,6 +28,7 @@
     min-height: 30%;
     max-height: 60%;
     position: relative;
+    transition: 1s;
 }
 
 .postR{
@@ -36,6 +37,19 @@
     height:100%;
     position: absolute;
     right: 0;
+    transition: 1s;
+}
+
+.postR:hover{
+    top: -10%;
+    transition: 1s;
+}
+
+.postR:hover > .smallPostR{
+    -moz-box-shadow: 0 0 3px black;
+    -webkit-box-shadow: 0 0 3px black;
+    box-shadow: 0 0 16px black;
+    transition: 1s;
 }
 
 .postL{
@@ -44,6 +58,19 @@
     height:100%;
     position: absolute;
     left: 0;
+    transition: 1s;
+}
+
+.postL:hover > .smallPostL{
+    -moz-box-shadow: 0 0 3px black;
+    -webkit-box-shadow: 0 0 3px black;
+    box-shadow: 0 0 16px black;
+    transition: 1s;
+}
+
+.postL:hover{
+    top: -10%;
+    transition: 1s;
 }
 
 .postInfoContainer{
