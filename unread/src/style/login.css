@@ -9,7 +9,7 @@
 }
 .left-side-background {
   width: 45%;
-  background-image: url("../Assets/side.png");
+  background-image: url("../assets/side.png");
   background-size: cover;
 }
 .email-pass-etc {
