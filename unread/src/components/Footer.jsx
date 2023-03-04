@@ -13,49 +13,34 @@ export const Footer = () => {
   return (
     <>
       <div className={styles.all}>
+        {/* <div className={styles.all1}> */}
         <div className={styles.top}>
           <div className={styles.left}>
-            <img src={logo} style={{ width: 150, height: 20 }}></img>
+            <img
+              src={logo}
+              style={{ width: 150, height: 20}}
+            ></img>
             <div className={styles.btn} style={{ marginTop: 40 }}>
-              <div style={{ margin: 25 }}>
+              <div className={styles.text1}>
                 <div style={{ fontSize: 10, color: "gray" }}>
                   Хамтран ажиллах хүсэлт илгээх
                 </div>
-                <div
-                  style={{
-                    color: "white",
-                    fontSize: 15,
-                    margin: 5,
-                    marginLeft: 0,
-                  }}
-                >
-                  Контент нийтлүүлэх
-                </div>
+                <div className={styles.text2}>Контент нийтлүүлэх</div>
               </div>
               <button className={styles.button}>{">"}</button>
             </div>
             <div className={styles.btn} style={{ marginTop: 20 }}>
-              <div style={{ margin: 25 }}>
+              <div className={styles.text1}>
                 <div style={{ fontSize: 10, color: "gray" }}>
                   Хамтран ажиллах хүсэлт илгээх
                 </div>
-                <div
-                  style={{
-                    color: "white",
-                    fontSize: 15,
-                    margin: 5,
-                    marginLeft: 0,
-                    cursor: "pointer",
-                  }}
-                >
-                  Эвент дээр хамтрах
-                </div>
+                <div className={styles.text2}>Эвент дээр хамтрах</div>
               </div>
               <button className={styles.button} style={{ cursor: "pointer" }}>
                 {">"}
               </button>
             </div>
-            <div style={{ marginTop: 50 }}>
+            <div className={styles.img}>
               <img src={apple} className={styles.pic1}></img>
               <img src={samsung} className={styles.pic2}></img>
             </div>
@@ -127,6 +112,7 @@ export const Footer = () => {
           <GrSoundcloud id={styles.sc}></GrSoundcloud>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 };

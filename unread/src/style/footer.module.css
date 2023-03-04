@@ -1,13 +1,24 @@
-.all {
-  width: 100%;
-  height: 800px;
+.all{
   background-color: #000;
+  width: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 100px;
 }
+/* 
+.all1 {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+  height: 80%;
+  background-color: #000; 
+} */
 .btn {
   border-radius: 15px;
   width: 290px;
@@ -35,144 +46,213 @@
   -webkit-box-shadow: 0px 1px 0px 8px rgba(108, 162, 255, 0.7);
   -moz-box-shadow: 0px 1px 0px 8px rgba(108, 162, 255, 0.7);
 }
-.p{
+.p {
   color: white;
   display: flex;
   gap: 10px;
 }
-.p1:hover{
+.p1:hover {
   color: gray;
 }
-.top{
+.top {
   display: flex;
   gap: 100px;
 }
-.p3{
+.p3 {
   color: gray;
   width: 50%;
   font-size: 10px;
 }
-.p2{
+.p2 {
   color: gray;
   transition: 300ms;
   font-size: 12px;
 }
-.p2:hover{
+.p2:hover {
   color: white;
   padding-left: 10px;
   transition: 300ms;
 }
-.zuun{
+.zuun {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.right{
+.right {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.bulan{
+.bulan {
   display: flex;
   gap: 50px;
 }
-.gol{
+.gol {
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding-top: 75px;
 }
-.p4{
+.p4 {
   color: gray;
   font-size: 12px;
   line-height: 20px;
 }
-.link{
+.link {
   color: white;
   transition: 300ms;
   font-size: 12px;
   text-decoration: none;
   padding-top: 15px;
 }
-.link:hover{
+.link:hover {
   padding-left: 10px;
   transition: 300ms;
-  
 }
-.baruun{
+.baruun {
   display: flex;
   flex-direction: column;
 }
-.bottom{
+.bottom {
   display: flex;
   gap: 200px;
 }
-.facebook{
+.facebook {
   color: gray;
   width: 50px;
   height: 50px;
 }
-.facebook:hover{
+.facebook:hover {
   color: #3f729b;
 }
-#twitter{
+#twitter {
   color: gray;
   width: 50px;
   height: 50px;
 }
-#twitter:hover{
-  color:#1da2f2;
+#twitter:hover {
+  color: #1da2f2;
 }
-#ig{
+#ig {
   color: gray;
   width: 50px;
   height: 50px;
 }
-#ig:hover{
-  color: rgb(214, 6, 214) ;
+#ig:hover {
+  color: rgb(214, 6, 214);
 }
-#in{
+#in {
   color: gray;
   width: 50px;
   height: 50px;
 }
-#in:hover{
-  color: #0077b5 ;
+#in:hover {
+  color: #0077b5;
 }
-#yt{
+#yt {
   color: gray;
   width: 50px;
   height: 50px;
 }
-#yt:hover{
-  color: red ;
+#yt:hover {
+  color: red;
 }
-#sc{
+#sc {
   color: gray;
   width: 50px;
   height: 50px;
 }
-#sc:hover{
-  color: #f50 ;
+#sc:hover {
+  color: #f50;
 }
-.pic1{
-  width: 130px
-}
-.pic2{
+.pic1 {
   width: 130px;
-  margin-left: 20px
+}
+.pic2 {
+  width: 130px;
+  margin-left: 20px;
+}
+.text1 {
+  margin: 25px;
+}
+.text2 {
+  color: white;
+  font-size: 15px;
+  margin: 5px;
+  margin-left: 0px;
+}
+.img {
+  margin-top: 50px;
 }
 @media only screen and (max-width: 1024px) {
-  .top{
-    gap: 20px;
+  .top {
+    gap: 80px;
   }
-  .btn{
+  .btn {
     width: 250px;
   }
-  .pic1{
-    width: 100px;
+  .pic1 {
+    padding-left: 20px;
   }
-  .pic2{
-    width: 100px;
+  .facebook {
+    width: 30px;
+    height: 30px;
+  }
+  #twitter {
+    width: 30px;
+    height: 30px;
+  }
+  #ig {
+    width: 30px;
+    height: 30px;
+  }
+  #in {
+    width: 30px;
+    height: 30px;
+  }
+  #yt {
+    width: 30px;
+    height: 30px;
+  }
+  #sc {
+    width: 30px;
+    height: 30px;
+  }
+  .bottom {
+    gap: 100px;
+  }
+  .p2 {
+    font-size: 10px;
+  }
+  .bulan {
+    gap: 10px;
+  }
+  .text1 {
+    margin: 20px;
+  }
+  .text2 {
+    font-size: 13px;
+  }
+  .p1 {
+    font-size: 13px;
+  }
+  .p3 {
+    width: 80%;
+  }
+  .img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .left {
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 412px) {
+  .top {
+    flex-direction: column;
+  }
+  .all1 {
+    height: 1500px;
   }
 }
