@@ -1,16 +1,18 @@
 import "./App.css";
-import { Home } from "./components";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Login } from "./components/Login";
+import { CarouseL } from "./components/Carousel";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <>
+      <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/carousel" element={<CarouseL/>} />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   );
 }
 
