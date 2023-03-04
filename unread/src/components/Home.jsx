@@ -1,4 +1,4 @@
-import style from "../designs/Home.module.css";
+import style from "../style/Home.module.css";
 import newsImg from "../assets/unread2.png";
 import newsImg2 from "../assets/unread.png";
 import profile from "../assets/unread3.jpeg";
@@ -38,6 +38,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
       {/* <Footer/> */}
     </div>
   );

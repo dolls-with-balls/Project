@@ -143,3 +143,10 @@
   align-items: center;
   gap: 5px;
 }
+
+@media only screen and (max-width: 770px) {
+  .innerContainer {
+    margin-top: 340px;
+    display: block;
+  }
+}
