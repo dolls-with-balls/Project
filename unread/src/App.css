@@ -3,8 +3,8 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/body.webp");
-  background-size: cover;
+  /* background-image: url("./assets/body.webp");
+  background-size: cover; */
 }
 /* #root {
   height: 100%;
