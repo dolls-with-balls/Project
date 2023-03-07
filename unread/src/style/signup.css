@@ -57,7 +57,7 @@
         overflow: visible;
         border-radius: 0%;
         background: rgb(177,177,177);
-background: linear-gradient(90deg, rgba(177,177,177,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(90deg, rgba(177,177,177,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
     }
     .left-side-background {
         display: none;

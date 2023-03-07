@@ -1,9 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(177,177,177);
-  background: linear-gradient(90deg, rgba(177,177,177,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-  box-shadow: inset rgba(0, 0, 0, 0.583) 0px 0px 1000px 1000px;
+  background: black;
   font-weight: 500;
 }
 #root {

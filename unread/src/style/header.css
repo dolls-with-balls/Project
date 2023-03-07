@@ -161,10 +161,36 @@
     display: none;
   }
   .header-container {
-    margin: 0 45px
+    margin: 0 45px;
+    padding: 20px;
   }
   .header-flip {
     width: auto;
+  }
+}
+@media only screen and (max-width: 737px) {
+  .header-flip {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+  .search-icon {
+    color: white;
+    opacity: 1;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-search {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 /*
