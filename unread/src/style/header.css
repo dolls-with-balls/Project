@@ -3,25 +3,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 90px);
+  max-width: 1525px;
   height: 4%;
-  margin: 0 10%;
+  margin: 0 auto;
   padding: 24px 0 19px 0;
 }
 .header-center {
-  width: 100%;
   height: 100%;
-  margin: 0 95px;
-  padding: 0 35px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .social-links {
+  display: block;
   position: absolute;
-  right: 0;
-  top: 34px;
+  right: 0px;
+  top: 35px;
 }
 .icon {
   color: white;
-  opacity: 0.3;
+  opacity: 0.7;
   margin-left: 11px;
 }
 .logo {
@@ -29,8 +31,8 @@
 }
 .header-nav {
   display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   font-size: 1.26rem;
@@ -74,8 +76,8 @@
 .header-flip {
   display: flex;
   align-items: center;
-  width: 37%;
   font-size: 0.8rem;
+  float: right;
 }
 .dot::marker {
   color: #30d5c8;
@@ -112,6 +114,20 @@
   color: white;
   opacity: 0.5;
 }
+.ig:hover {
+  color: white;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.fb:hover {
+  color: #2c5fcd;
+}
+.tw:hover {
+  color: #00acee;
+}
+.ln:hover {
+  color: #0072b1
+}
 @keyframes dot {
   0% {
     opacity: 0%;
@@ -121,6 +137,17 @@
   }
   100% {
     opacity: 0%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .social-links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1220px) {
+  .header-container {
+    max-width: 1186px;
+    padding: 0 35px;
   }
 }
 @media only screen and (max-width: 1040px) {

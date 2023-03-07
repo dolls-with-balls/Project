@@ -2,7 +2,13 @@ import React from "react";
 import "../style/signup.css"
 export const Signup = () => {
     return (
-        <>
+        <div style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100vw",
+            height: "100vh",
+            overflow: "hidden"
+        }}>
             <div className="sign-up-container" >
                 <div className="left-side-background"></div>
                 <div className="email-pass-etc">
@@ -16,6 +22,6 @@ export const Signup = () => {
                     <a href="/login">Already have an account?</a>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

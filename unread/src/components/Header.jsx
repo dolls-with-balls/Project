@@ -19,20 +19,34 @@ export const Header = () => {
             </a>
             <span className="divider"></span>
             <form className="header-form" action="/search">
-              <BiSearch className="search-icon"/>
-              <input className="search-bar" placeholder="Хайлт хийх" type="text" />
+              <BiSearch className="search-icon" />
+              <input
+                className="search-bar"
+                placeholder="Хайлт хийх"
+                type="text"
+              />
             </form>
           </div>
           <div className="header-flip">
             <span className="opacity05">Дараагийн нийтлэл:</span>
             <span className="next-article-category">Номын тухай</span>
-            <button className="header-button">Өнөөдөр орно <li className="dot"></li></button>
+            <button className="header-button">
+              Өнөөдөр орно <li className="dot"></li>
+            </button>
           </div>
           <div className="social-links">
-            <AiFillFacebook className="icon" />
-            <AiOutlineInstagram className="icon" />
-            <AiOutlineTwitter className="icon" />
-            <FaLinkedinIn className="icon" />
+            <a href="">
+              <AiFillFacebook className="icon fb" />
+            </a>
+            <a href="">
+              <AiOutlineInstagram className="icon ig" />
+            </a>
+            <a href="">
+              <AiOutlineTwitter className="icon tw" />
+            </a>
+            <a href="">
+              <FaLinkedinIn className="icon ln" />
+            </a>
           </div>
         </div>
       </div>
