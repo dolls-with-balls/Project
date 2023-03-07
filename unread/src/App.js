@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Login } from "./components/Login";
+import { Home } from "./components/Home";
 import { CarouseL } from "./components/Carousel";
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/carousel" element={<CarouseL/>} />
+          <Route path="/carousel" element={<CarouseL />} />
         </Routes>
       </BrowserRouter>
     </>
