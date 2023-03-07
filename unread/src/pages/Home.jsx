@@ -8,11 +8,7 @@ export const Home = () => {
     <div className={style.container}>
       {/* <Header/> */}
       <div className={style.backG}>
-        <img
-          src={newsImg}
-          alt="backG"
-          style={{ width: "100%", opacity: "0.35" }}
-        />
+        <img src={newsImg} alt="backG" className={style.background} />
         <div className={style.gradient} />
       </div>
       <div className={style.innerContainer}>
