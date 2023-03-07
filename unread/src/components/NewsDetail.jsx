@@ -1,5 +1,5 @@
 import style from "../style/newsDetail.module.css";
-import newsImg from "../assets/unread.png";
+import newsImg from "../assets/unread2.jpg";
 import profile from "../assets/unreadp.jpeg";
 import newsImg2 from "../assets/unread2.jpg";
 import comment from "../assets/unread3.png";
