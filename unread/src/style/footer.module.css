@@ -1,12 +1,32 @@
-.all{
+.footer {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: flex; */
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  /* align-items: flex-end; */
+}
+.all {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #000;
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 100px;
+}
+
+.logo {
+  width: 150px;
+  height: 20px;
+}
+.tal {
+  display: flex;
+  gap: 50px;
 }
 /* 
 .all1 {
@@ -248,11 +268,76 @@
     padding-left: 20px;
   }
 }
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 414px) {
   .top {
     flex-direction: column;
   }
-  .all1 {
-    height: 1500px;
+  .all {
+    justify-content: unset;
+    align-items: unset;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  .img {
+    flex-direction: row;
+  }
+  .bulan {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .bottom {
+    gap: 30px;
+    padding-bottom: 70px;
+  }
+  .p1 {
+    font-size: 10px;
+  }
+  .pic1 {
+    padding-left: 0px;
+  }
+  .facebook {
+    width: 20px;
+    height: 20px;
+  }
+  #twitter {
+    width: 20px;
+    height: 20px;
+  }
+  #ig {
+    width: 20px;
+    height: 20px;
+  }
+  #in {
+    width: 20px;
+    height: 20px;
+  }
+  #yt {
+    width: 20px;
+    height: 20px;
+  }
+  #sc {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .pic1 {
+    width: 100px;
+  }
+  .pic2 {
+    width: 100px;
+  }
+  .btn {
+    width: 240px;
+  }
+  .left {
+    padding-left: 10px;
+  }
+  .p {
+    gap: 0px;
+  }
+  .all {
+    padding-left: 10px;
   }
 }
