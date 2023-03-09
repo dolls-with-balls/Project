@@ -1,27 +1,31 @@
 import React, { useRef } from "react";
 import { client } from "../client";
 import "../style/signup.css"
+import { useNavigate } from "react-router-dom"
+import { AxiosError } from "axios";
 
 export const Signup = () => {
+    const navigate=useNavigate();
+    const username=useRef();
     const email=useRef();
     const password=useRef();
     const confirmPassword=useRef();
 
     async function Signup () {
-        console.log(1)
+        const userInput=username.current.value;
         const emailInput=email.current.value;
         const passwordInput=password.current.value;
         const confirmPasswordInput=confirmPassword.current.value;
 
 
-        if(passwordInput === confirmPasswordInput){
-            await client.post("/signup",{email:emailInput , password:passwordInput})
-                .then(async(res)=>{
-                    console.log(res.data)
-                }).catch((err)=>{
-                    console.log(err)
-                })
-        }
+        await client.post("/signup",{email:emailInput, username:userInput , password:passwordInput , passwordConfirm:confirmPasswordInput})
+            .then(async(res)=>{
+                if(res){
+                    navigate("/login");
+                }
+            }).catch((err)=>{
+                console.log(err)
+            })
        
     }
 
@@ -37,6 +41,7 @@ export const Signup = () => {
                 <div className="left-side-background"></div>
                 <div className="email-pass-etc">
                     <h2>Sign up</h2>
+                    <input type="text" placeholder="Username" ref={username}/>
                     <input type="text" placeholder="Email" ref={email}/>
                     <input type="text" placeholder="Password" ref={password}/>
                     <input type="text" placeholder="Confirm Password" ref={confirmPassword}/>
