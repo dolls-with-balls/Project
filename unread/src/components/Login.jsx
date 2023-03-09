@@ -1,63 +1,19 @@
-import React, { useRef } from "react";
-import "../style/login.css";
-import { client } from "../client";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import "../style/login.css"
 
 export const Login = () => {
-  const navigate = useNavigate();
-  const username = useRef();
-  const password = useRef();
-
-  async function Login() {
-    const usernameInput = username.current.value;
-    const passwordInput = password.current.value;
-
-    await client
-      .post("/login", { username: usernameInput, password: passwordInput })
-      .then(async (res) => {
-        // console.log(res.data);
-        localStorage.setItem("token", res.data);
-        if (res) {
-          client
-            .get("/verify")
-            .then(async (res) => {
-            //   console.log(res.data.user);
-            //   localStorage.setItem("user",JSON.stringify(res.data.user))
-            if(res){
-                navigate("/")
-            }
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        width: "100vw",
-        height: "100vh",
-        overflow: "hidden",
-        marginTop: 20,
-      }}
-    >
-      <div className="sign-up-container">
-        <div className="left-side-background"></div>
-        <div className="email-pass-etc">
-          <h2>Log in</h2>
-          <input type="text" placeholder="Username" ref={username} />
-          <input type="text" placeholder="Password" ref={password} />
-          <button onClick={Login} className="login-button">
-            Log in
-          </button>
-          <a href="/login">Don't have an account?</a>
+    <div className={style.container}>
+      <div className={style.innerContainer}>
+        <div className={style.signUpContainer}>
+          <div className={style.leftSideBackground}></div>
+          <div className={style.emailPassEtc}>
+            <h2>Log in</h2>
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Password" />
+            <button className={style.signupButton}>Log in</button>
+            <a href="/signup">Don't have an account?</a>
+          </div>
         </div>
       </div>
     </div>
