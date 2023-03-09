@@ -2,11 +2,12 @@ import style from "../style/Home.module.css";
 import newsImg from "../assets/unread2.png";
 import newsImg2 from "../assets/unreadHome.png";
 import profile from "../assets/unread3.jpeg";
+import { Header } from "../components/Header";
 
 export const Home = () => {
   return (
     <div className={style.container}>
-      {/* <Header/> */}
+      <Header />
       <div className={style.backG}>
         <img src={newsImg} alt="backG" className={style.background} />
         <div className={style.gradient} />
