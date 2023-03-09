@@ -1,15 +1,23 @@
-import './App.css';
-import { Signup } from './components/Signup';
-import { BrowserRouter, Route, Routes } from 'react-router-dom' 
-import { Header } from './components/Header';
+import "./App.css";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Login } from "./components/Login";
+import { Home } from "./pages/Home";
+import { CarouseL } from "./components/Carousel";
+import { Header } from "./components/Header";
+import { NewsDetail } from "./components/NewsDetail";
+
 function App() {
   return (
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-      <Route path='/signup' element={ <Signup/> }/>
-    </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/news" element={<NewsDetail />} />
+          <Route path="/carousel" element={<CarouseL />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
