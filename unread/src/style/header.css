@@ -162,15 +162,135 @@
     display: none;
   }
   .header-center {
-    margin: 0;
+    margin: 0
   }
   .next-article-category {
     display: none;
   }
   .header-container {
     margin: 0 45px;
+    padding: 20px;
   }
   .header-flip {
     width: auto;
   }
 }
+@media only screen and (max-width: 737px) {
+  .header-flip {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+  .search-icon {
+    color: white;
+    opacity: 1;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-search {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+/*
+.left-side-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  color: white;
+}
+.right-side-header {
+  border: 1px solid;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.logo-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+}
+.logo-search h1 {
+  margin: 0;
+}
+.logo {
+  width: 15%;
+}
+.search-bar {
+  height: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: gainsboro;
+}
+.search-bar::placeholder {
+  color: gainsboro;
+  padding: 5px;
+}
+.right-side-header p {
+  opacity: 50%;
+}
+.nom61n-tuhai {
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.right-side-header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(203, 202, 202);
+  box-shadow: 4px 4px 50px -4px white;
+  color: white;
+  opacity: 75%;
+  padding: 10px;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.search-icon {
+  width: 30px;
+  color: gainsboro;
+}
+.search {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.icon {
+  color: gainsboro;
+  width: 20px;
+  height: 20px;
+}
+.icon-container {
+  border: 1px solid;
+  display: flex;
+  gap: 15px;
+}
+.navbar-content {
+  border: 1px solid;
+  display: flex;
+  gap: 20px;
+  width: 70%;
+  height: 40%;
+}
+ */

@@ -3,7 +3,7 @@ import style from "../style/login.module.css";
 
 export const Login = () => {
   return (
-    <div className={style.container}>
+    <div className={style.outsideContainer}>
       <div className={style.innerContainer}>
         <div className={style.signUpContainer}>
           <div className={style.leftSideBackground}></div>

@@ -5,14 +5,17 @@ import { Home } from "./pages/Home";
 import { CarouseL } from "./components/Carousel";
 import { Header } from "./components/Header";
 import { NewsDetail } from "./components/NewsDetail";
+import { Signup } from "./components/Signup";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/news" element={<NewsDetail />} />
           <Route path="/carousel" element={<CarouseL />} />
         </Routes>
