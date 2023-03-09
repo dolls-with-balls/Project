@@ -14,9 +14,10 @@ export const Login = () => {
 
         await client.post("/login",{username:usernameInput , password:passwordInput})
             .then(async(res)=>{
+                console.log(res.data)
                 if(res){
                     localStorage.setItem("token" , res.data);
-                    navigate("/")
+                    // navigate("/")
                 }
             }).catch((err)=>{
                 console.log(err);
