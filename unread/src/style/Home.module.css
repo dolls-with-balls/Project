@@ -170,3 +170,8 @@
     font-size: 28px;
   }
 }
+
+.carouselContainer {
+  display: flex;
+  width: 100%;
+}

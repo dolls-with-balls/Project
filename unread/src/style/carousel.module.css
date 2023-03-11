@@ -1,0 +1,11 @@
+.carouselContainer {
+  width: 100%;
+  z-index: 1;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}

@@ -14,7 +14,6 @@ import { Button } from "@mantine/core";
 export const NewsDetail = () => {
   return (
     <div className={style.container}>
-      {/* <Header/> */}
       <div className={style.innerContainer}>
         <Container>
           <div className={style.titleContainer}>

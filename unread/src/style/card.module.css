@@ -1,0 +1,15 @@
+.container {
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  transition: 200ms;
+  background-color: red;
+  border-radius: 10px;
+}
+.container:hover {
+  transform: scale(1.1);
+}
+.title {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
