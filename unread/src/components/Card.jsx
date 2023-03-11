@@ -17,7 +17,7 @@ export const Card = () => {
     <>
       <a className={styles.card}>
         <MDBCard className={styles.background}>
-          <MDBCardImage src="" alt="..." position="top" />
+          <MDBCardImage src="" position="top" />
           <MDBCardBody>
             <MDBCardTitle>Card title</MDBCardTitle>
             <MDBCardText>blabalalbalablab</MDBCardText>
