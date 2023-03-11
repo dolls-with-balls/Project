@@ -10,11 +10,11 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { Button } from "@mantine/core";
-
+import { HeaderWhite } from "./HeaderWhite";
 export const NewsDetail = () => {
   return (
     <div className={style.container}>
-      {/* <Header/> */}
+    <HeaderWhite/>
       <div className={style.innerContainer}>
         <Container>
           <div className={style.titleContainer}>
