@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/header.css";
-import headerLogo from "../assets/logo.png";
+import headerLogo from "../assets/logo1.png";
 import {
   AiFillFacebook,
   AiOutlineInstagram,
