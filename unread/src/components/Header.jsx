@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/header.css";
+import style from "../style/header.module.css";
 import headerLogo from "../assets/logo1.png";
 import {
   AiFillFacebook,
@@ -10,31 +10,31 @@ import { BiSearch } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 export const Header = () => {
   return (
-    <div className="header-container">
-      <div className="header-center">
-        <div className="header-nav">
-          <div className="header-search">
+    <div className={style.headerContainer}>
+      <div className={style.headerCenter}>
+        <div className={style.headerNav}>
+          <div className={style.headerSearch}>
             <a href="/">
-              <img className="logo" src={headerLogo} alt="" />
+              <img className={style.logo} src={headerLogo} alt="" />
             </a>
-            <span className="divider"></span>
-            <form className="header-form" action="/search">
-              <BiSearch className="search-icon" />
+            <span className={style.divider}></span>
+            <form className={style.headerForm} action="/search">
+              <BiSearch className={style.searchIcon} />
               <input
-                className="search-bar"
+                className={style.searchBar}
                 placeholder="Хайлт хийх"
                 type="text"
               />
             </form>
           </div>
-          <div className="header-flip">
-            <span className="opacity05">Дараагийн нийтлэл:</span>
-            <span className="next-article-category">Номын тухай</span>
-            <button className="header-button">
-              Өнөөдөр орно <li className="dot"></li>
+          <div className={style.headerFlip}>
+            <span className={style.opacity05}>Дараагийн нийтлэл:</span>
+            <span className={style.nextArticleCategory}>Номын тухай</span>
+            <button className={style.headerButton}>
+              Өнөөдөр орно <li className={style.dot}></li>
             </button>
           </div>
-          <div className="social-links">
+          <div className={style.socialLinks}>
             <a href="">
               <AiFillFacebook className="icon fb" />
             </a>
