@@ -7,21 +7,33 @@ export const DataProvider = (props) => {
   const [user, setUser] = useState([]);
   const [post, setPost] = useState([]);
   const [lastPost, setLastPost] = useState([]);
+  const [postId, setPostId] = useState("");
 
   useEffect(() => {
-    client
-      .get("/verify")
-      .then(async (res) => {
-        setUser(res.data.user);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (localStorage.getItem("token"))
+      client
+        .get("/verify")
+        .then(async (res) => {
+          setUser(res.data.user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
   }, []);
 
   return (
     <DataContext.Provider
-      value={{ user, setUser, post, setPost, lastPost, lastPost, setLastPost }}
+      value={{
+        user,
+        setUser,
+        post,
+        setPost,
+        lastPost,
+        lastPost,
+        setLastPost,
+        postId,
+        setPostId,
+      }}
     >
       {props.children}
     </DataContext.Provider>

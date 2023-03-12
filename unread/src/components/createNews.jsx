@@ -8,7 +8,7 @@ export const CreateNews = () => {
   const title = useRef();
   const main = useRef();
   const nav = useNavigate();
-  const { user, setPost, post } = useContext(DataContext);
+  const { user, setPost, post, postId, setPostId } = useContext(DataContext);
 
   const create = () => {
     client
@@ -19,8 +19,23 @@ export const CreateNews = () => {
       })
       .then((res) => {
         console.log(res.data);
-        setPost(...post, res.data);
+        setPost([...post, res.data]);
+        AddToUser(res);
         nav("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const AddToUser = (res) => {
+    client
+      .put("/user", {
+        userId: user._id,
+        postId: res.data._id,
+      })
+      .then((res) => {
+        // console.log(res);
       })
       .catch((err) => {
         console.log(err);
