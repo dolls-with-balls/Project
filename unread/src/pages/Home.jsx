@@ -6,6 +6,7 @@ import { client } from "../client";
 import { useContext, useEffect } from "react";
 import { DataContext } from "../contexts/DataProvider";
 import { CarouseL } from "../components/Carousel";
+import { Header } from "../components/Header";
 
 export const Home = () => {
   const { setUser, setPost, lastPost, setLastPost, post } =
@@ -39,6 +40,7 @@ export const Home = () => {
   return (
     <>
       <div className={style.container}>
+        <Header />
         <div className={style.backG}>
           <img src={newsImg} alt="backG" className={style.background} />
           <div className={style.gradient} />
