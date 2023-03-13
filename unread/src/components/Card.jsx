@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cardImg from "../assets/img.jpg";
 import style from "../style/card.module.css";
 
 export const Card = ({ title, creatorId, _id }) => {
@@ -8,8 +9,13 @@ export const Card = ({ title, creatorId, _id }) => {
       style={{ textDecoration: "none", color: "black" }}
     >
       <div className={style.container}>
-        <h1 className={style.title}>{title}</h1>
-        <h6>Creator : {creatorId && creatorId.username}</h6>
+        <img src={cardImg} alt="cardImg" className={style.img} />
+        <div className={style.innerContainer}>
+          <div className={style.title}>
+            <div>{title}</div>
+            <div> Publisher : {creatorId && creatorId.username}</div>
+          </div>
+        </div>
       </div>
     </Link>
   );

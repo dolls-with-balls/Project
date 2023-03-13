@@ -1,11 +1,10 @@
 import "./App.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { Login } from "./components/Login";
+import { Login } from "./pages/Login";
 import { Home } from "./pages/Home";
-import { CarouseL } from "./components/Carousel";
 import { Header } from "./components/Header";
 import { NewsDetail } from "./components/NewsDetail";
-import { Signup } from "./components/Signup";
+import { Signup } from "./pages/Signup";
 import { CreateNews } from "./components/createNews";
 import { DataProvider } from "./contexts/DataProvider";
 
@@ -23,7 +22,6 @@ function App() {
               <Route path=":id" element={<NewsDetail />} />
             </Route>
             <Route path="/create" element={<CreateNews />} />
-            {/* <Route path="/carousel" element={<CarouseL />} /> */}
           </Routes>
         </DataProvider>
       </BrowserRouter>

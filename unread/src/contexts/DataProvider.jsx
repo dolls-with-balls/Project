@@ -7,7 +7,7 @@ export const DataProvider = (props) => {
   const [user, setUser] = useState([]);
   const [post, setPost] = useState([]);
   const [lastPost, setLastPost] = useState([]);
-  const [postId, setPostId] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (localStorage.getItem("token"))
@@ -31,8 +31,8 @@ export const DataProvider = (props) => {
         lastPost,
         lastPost,
         setLastPost,
-        postId,
-        setPostId,
+        error,
+        setError,
       }}
     >
       {props.children}

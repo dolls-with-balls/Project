@@ -1,15 +1,27 @@
 .container {
-  border: 1px solid black;
-  width: 200px;
-  height: 300px;
   transition: 200ms;
-  background-color: red;
+  border-radius: 10px;
+  position: relative;
+}
+
+.img {
+  width: 350px;
+  height: 450px;
+  transition: 200ms;
   border-radius: 10px;
 }
+.innerContainer {
+  position: absolute;
+  bottom: 0;
+}
 .container:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
 }
 .title {
-  font-size: 1.4rem;
-  line-height: 1.5rem;
+  background-color: rgba(128, 128, 128, 0.404);
+  width: 350px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 26px;
+  color: white;
 }

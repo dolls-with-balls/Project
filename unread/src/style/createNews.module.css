@@ -4,6 +4,10 @@
   width: 100%;
   align-items: center;
 }
+.warningSection {
+  display: flex;
+  justify-content: center;
+}
 .inputSection {
   display: flex;
   flex-direction: column;

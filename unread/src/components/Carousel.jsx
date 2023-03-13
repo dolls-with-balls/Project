@@ -11,18 +11,16 @@ export const CarouseL = () => {
   return (
     <div className={style.carouselContainer}>
       <Container>
-        <div className={style.div}>
-          <Carousel slideSize="20px" align="start" slideGap="md">
-            {post &&
-              post.map((item, index) => {
-                return (
-                  <Carousel.Slide style={{ padding: "15px" }} key={index}>
-                    <Card {...item} index={index} />
-                  </Carousel.Slide>
-                );
-              })}
-          </Carousel>
-        </div>
+        <Carousel slideSize="20px" align="start" slideGap="md">
+          {post &&
+            post.map((item, index) => {
+              return (
+                <Carousel.Slide style={{ padding: "15px" }} key={index}>
+                  <Card {...item} index={index} />
+                </Carousel.Slide>
+              );
+            })}
+        </Carousel>
       </Container>
     </div>
   );

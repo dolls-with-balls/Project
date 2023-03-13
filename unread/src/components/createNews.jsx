@@ -8,9 +8,11 @@ export const CreateNews = () => {
   const title = useRef();
   const main = useRef();
   const nav = useNavigate();
-  const { user, setPost, post, postId, setPostId } = useContext(DataContext);
+  const { user, setPost, post, error, setError } = useContext(DataContext);
 
   const create = () => {
+    console.log(user);
+    if (user.length === 0) setError("you must log in");
     client
       .post("/createPost", {
         title: title.current.value,
@@ -18,10 +20,10 @@ export const CreateNews = () => {
         creatorId: user && user._id,
       })
       .then((res) => {
-        console.log(res.data);
+        nav("/");
         setPost([...post, res.data]);
         AddToUser(res);
-        nav("/");
+        setError("");
       })
       .catch((err) => {
         console.log(err);
@@ -46,6 +48,11 @@ export const CreateNews = () => {
     <div className={style.container}>
       <Container>
         <div className={style.inputSection}>
+          <div className={style.warningSection}>
+            <div style={{ color: "red", fontWeight: "500" }}>
+              {error && error}
+            </div>
+          </div>
           <input placeholder="title" className={style.input} ref={title} />
           <textarea placeholder="main" className={style.textarea} ref={main} />
         </div>

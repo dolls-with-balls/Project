@@ -102,7 +102,7 @@ export const NewsDetail = () => {
               <hr style={{ width: "80px", opacity: "0.6" }} />
               <div style={{ width: "130px" }}>
                 <div style={{ color: "#6d7378" }}>Нийтлэлд оролцсон:</div>
-                <div>С. Мөнх-Эрдэнэ</div>
+                <div>{data.creatorId && data.creatorId.username}</div>
               </div>
             </div>
 
