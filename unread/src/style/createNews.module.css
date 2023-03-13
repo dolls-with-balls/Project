@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+.warningSection {
+  display: flex;
+  justify-content: center;
+}
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+}
+.input,
+.textarea {
+  border: none;
+  outline: none;
+}
+
+.input {
+  border-bottom: 1px solid grey;
+  height: 5vh;
+}
+
+.textarea {
+  height: 50vh;
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: end;
+  padding-top: 10px;
+}

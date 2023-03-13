@@ -10,23 +10,39 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { Button } from "@mantine/core";
-import { HeaderWhite } from "./HeaderWhite";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { client } from "../client";
+
 export const NewsDetail = () => {
+  const params = useParams();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (data)
+      client
+        .get(`/post/${params.id}`)
+        .then((res) => {
+          console.log(res.data);
+          setData(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+  }, []);
+
   return (
     <div className={style.container}>
-    <HeaderWhite/>
       <div className={style.innerContainer}>
         <Container>
           <div className={style.titleContainer}>
             <div className={style.category}>
-              <div style={{ color: "#0078f6" }}>TECHWORM</div>
-              <div style={{ color: "#6d7378" }}>2 САРЫН 28, 2023</div>
+              <div style={{ color: "#0078f6" }}>NEWEST</div>
+              <div style={{ color: "#6d7378" }}>{data && data.createdAt}</div>
               <span className={style.dot} />
               <div style={{ color: "#6d7378" }}>3min</div>
             </div>
-            <h1 className={style.title}>
-              Апп тойм: Ask Y - Чанартай боловсролыг сурагч бүрд
-            </h1>
+            <h1 className={style.title}>{data && data.title}</h1>
           </div>
           <img src={newsImg} alt="newsImg" className={style.img} />
 
@@ -37,7 +53,7 @@ export const NewsDetail = () => {
 
                 <div className={style.author}>
                   <div style={{ color: "#6d7378" }}>Нийтэлсэн:</div>
-                  <div>localhost:3000</div>
+                  <div>{data.creatorId && data.creatorId.username}</div>
                 </div>
               </div>
 
@@ -86,42 +102,13 @@ export const NewsDetail = () => {
               <hr style={{ width: "80px", opacity: "0.6" }} />
               <div style={{ width: "130px" }}>
                 <div style={{ color: "#6d7378" }}>Нийтлэлд оролцсон:</div>
-                <div>С. Мөнх-Эрдэнэ</div>
+                <div>{data.creatorId && data.creatorId.username}</div>
               </div>
             </div>
 
             <div>
               <div className={style.mainNews}>
-                <div className={style.texts}>
-                  Монгол улсад 2021 оны байдлаар ЕБС-ын нэг багшид дунджаар 20
-                  сурагч оногдож байгаа гэх судалгааны дүн бий. Хичээлийн 40
-                  минутын хугацаанд багш зөвхөн үндсэн сэдвээ тайлбарлаж, гэрийн
-                  даалгавараа өгөөд таарах нь түгээмэл үзэгдэл. Бодит байдал
-                  дээр багш сурагч нэг бүртэй тулж ажиллан тэдэнд тулгараад буй
-                  саад бэрхшээл, үзэж буй хичээлээс ойлгомжгүй үлдсэн зүйлс дээр
-                  тодорхой заавар, зөвлөгөө өгөөд явах боломж бололцоо ч хомс
-                  байдаг нь нууц биш.
-                </div>
-
-                <div className={style.texts}>
-                  Боловсролын салбар дахь энэхүү нийтлэг дүр зургаас үүдэн
-                  сурагчдын хичээлийн хоцрогдол, хичээлдээ сонирхолгүй болох,
-                  дуртай хичээлээ тодорхойлж чадалгүй байсаар хүсэл сонирхлоо
-                  олохгүй байх зэрэг томоохон асуудлууд бий болж байна. Гэхдээ
-                  асуудал бүрд шийдэл бий. Дээрх асуудлыг хялбараар шийдэхэд
-                  туслах Ask Y апп нь сурагчдын хүндрэл бэрхшээлийг хамтдаа
-                  даван туулах үйлсийг эхлүүлжээ.
-                </div>
-
-                <h3 style={{ color: "#0078f6" }}>ASK Y ГЭЖ ЮУ ВЭ?</h3>
-                <div className={style.texts}>
-                  Ask Y апп нь ерөнхий боловсролын сургуулийн 6-12-р ангийн
-                  сурагчдад зориулсан боловсролыг дэмжих апп юм. Сурагчдад
-                  хамгийн их асуулт бий болж, асуудал тулгардаг хичээлүүд болох
-                  математик, физик, химийн хичээлүүдээс сонгоод асуух зүйлсээ
-                  текст болон зурган хэлбэрээр оруулаад салбартаа тэргүүлэгч 90
-                  гаруй багш нараас тодорхой хариултуудыг авах боломжтой.
-                </div>
+                <div className={style.texts}>{data && data.mainNews}</div>
               </div>
               <img src={newsImg2} alt="newsImg2" className={style.img} />
             </div>
