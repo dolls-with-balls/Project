@@ -4,6 +4,7 @@ import { client } from "../client";
 import { useContext, useRef } from "react";
 import { DataContext } from "../contexts/DataProvider";
 import { useNavigate } from "react-router-dom";
+import { HeaderWhite } from "./HeaderWhite";
 export const CreateNews = () => {
   const title = useRef();
   const main = useRef();
@@ -45,23 +46,30 @@ export const CreateNews = () => {
   };
 
   return (
-    <div className={style.container}>
-      <Container>
-        <div className={style.inputSection}>
-          <div className={style.warningSection}>
-            <div style={{ color: "red", fontWeight: "500" }}>
-              {error && error}
+    <>
+      <HeaderWhite />
+      <div className={style.container}>
+        <Container>
+          <div className={style.inputSection}>
+            <div className={style.warningSection}>
+              <div style={{ color: "red", fontWeight: "500" }}>
+                {error && error}
+              </div>
             </div>
+            <input placeholder="title" className={style.input} ref={title} />
+            <textarea
+              placeholder="main"
+              className={style.textarea}
+              ref={main}
+            />
           </div>
-          <input placeholder="title" className={style.input} ref={title} />
-          <textarea placeholder="main" className={style.textarea} ref={main} />
-        </div>
-        <div className={style.buttonSection}>
-          <Button variant="success" onClick={create}>
-            Post
-          </Button>
-        </div>
-      </Container>
-    </div>
+          <div className={style.buttonSection}>
+            <Button variant="success" onClick={create}>
+              Post
+            </Button>
+          </div>
+        </Container>
+      </div>
+    </>
   );
 };

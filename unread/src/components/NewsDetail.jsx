@@ -2,20 +2,20 @@ import style from "../style/newsDetail.module.css";
 import newsImg from "../assets/unread2.png";
 import profile from "../assets/unreadp.jpeg";
 import newsImg2 from "../assets/unread2.jpg";
-import comment from "../assets/unread3.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import { Container } from "react-bootstrap";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
-import { Button } from "@mantine/core";
 import { HeaderWhite } from "./HeaderWhite";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../client";
+import { Comments } from "./Comments";
 export const NewsDetail = () => {
   const params = useParams();
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -115,32 +115,7 @@ export const NewsDetail = () => {
             </div>
           </div>
         </Container>
-        <div className={style.commentSection}>
-          <div className={style.title}>
-            <img
-              src={comment}
-              alt="comment"
-              style={{ width: "30px", height: "30px" }}
-            />
-            <h5>Сэтгэгдэл бичих (0)</h5>
-          </div>
-
-          <div className={style.inputContainer}>
-            <input placeholder="Таны нэр" type="text" className={style.input} />
-            <textarea
-              placeholder="Санал сэтгэгдэл"
-              className={style.textArea}
-            />
-          </div>
-
-          <Button
-            variant="default"
-            color="gray"
-            style={{ width: "400px", color: "grey" }}
-          >
-            Сэтгэгдэл бичих
-          </Button>
-        </div>
+        <Comments />
       </div>
 
       {/* <Footer/> */}
