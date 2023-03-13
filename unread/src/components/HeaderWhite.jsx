@@ -1,6 +1,6 @@
 import React from "react";
-import style from "../style/header.module.css";
-import headerLogo from "../assets/logo1.png";
+import style from "../style/headerwhite.module.css";
+import headerLogo from "../assets/logoblack.png";
 import {
   AiFillFacebook,
   AiOutlineInstagram,
@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
-export const Header = () => {
+export const HeaderWhite = () => {
   return (
     <div className={style.headerContainer}>
       <div className={style.headerCenter}>

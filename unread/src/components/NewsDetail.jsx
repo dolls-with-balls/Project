@@ -10,10 +10,14 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { Button } from "@mantine/core";
+<<<<<<< HEAD
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { client } from "../client";
 
+=======
+import { HeaderWhite } from "./HeaderWhite";
+>>>>>>> 317fa5f4cdc9f7dac8b7a89016b801723d86f639
 export const NewsDetail = () => {
   const params = useParams();
   const [data, setData] = useState([]);
