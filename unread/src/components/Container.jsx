@@ -1,4 +1,4 @@
-import styles from "../styles/Container.module.css";
+import styles from "../style/Container.module.css";
 import { AiFillEye } from "react-icons/ai";
 import { IoIosText } from "react-icons/io";
 
