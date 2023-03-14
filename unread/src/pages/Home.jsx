@@ -10,6 +10,7 @@ import { CarouseL } from "../components/Carousel";
 import { Header } from "../components/Header";
 
 import { client } from "../client";
+import { Container } from "../components/Container";
 
 export const Home = () => {
   const { setUser, setPost, lastPost, setLastPost, post } =
@@ -40,7 +41,7 @@ export const Home = () => {
     setLastPost([post[post.length - 1]]);
   }, [post]);
 
-  console.log(lastPost)
+  console.log(lastPost);
   return (
     <>
       <div className={style.container}>
@@ -79,6 +80,9 @@ export const Home = () => {
       </div>
       <div className={style.carouselContainer}>
         <CarouseL />
+      </div>
+      <div style={{ marginTop: "100px" }}>
+        <Container />
       </div>
       {/* <Footer/> */}
     </>

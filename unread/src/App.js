@@ -7,6 +7,7 @@ import { NewsDetail } from "./components/NewsDetail";
 import { Signup } from "./pages/Signup";
 import { CreateNews } from "./components/createNews";
 import { DataProvider } from "./contexts/DataProvider";
+import { Container } from "./components/Container";
 
 function App() {
   return (
