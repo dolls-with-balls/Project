@@ -8,28 +8,29 @@ import { useContext, useEffect } from "react";
 import { DataContext } from "../contexts/DataProvider";
 import { CarouseL } from "../components/Carousel";
 import { Header } from "../components/Header";
-
+import { Footer } from "../components/Footer";
 import { client } from "../client";
 import { Container } from "../components/Container";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-  const { setUser, setPost, lastPost, setLastPost, post } =
+  const { setUser, setPost, lastPost, setLastPost, post, user } =
     useContext(DataContext);
 
   useEffect(() => {
-    client
-      .get("/verify")
-      .then(async (res) => {
-        setUser(res.data.user);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
+    if (localStorage.getItem("token")) {
+      client
+        .get("/verify")
+        .then(async (res) => {
+          setUser(res.data.user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
     client
       .get("/getPosts")
       .then((res) => {
-        console.log(res.data);
         setPost(res.data);
       })
       .catch((err) => {
@@ -41,18 +42,28 @@ export const Home = () => {
     setLastPost([post[post.length - 1]]);
   }, [post]);
 
-  console.log(lastPost);
+  console.log(user);
+
   return (
     <>
       <div className={style.container}>
         <Header />
         <div className={style.backG}>
-          <img src={newsImg} alt="backG" className={style.background} />
+          <img
+            src={lastPost[0] && lastPost[0].imageUrls[0]}
+            alt="backG"
+            className={style.background}
+          />
           <div className={style.gradient} />
         </div>
+
         <div className={style.innerContainer}>
           <div className={style.imgContainer}>
-            <img src={newsImg2} alt="newsImg" className={style.img} />
+            <img
+              src={lastPost[0] && lastPost[0].imageUrls[0]}
+              alt="newsImg"
+              className={style.img}
+            />
           </div>
           <div className={style.titleSection}>
             <div className={style.glowingTitle}>Өнөөдөр</div>
@@ -81,10 +92,8 @@ export const Home = () => {
       <div className={style.carouselContainer}>
         <CarouseL />
       </div>
-      <div style={{ marginTop: "100px" }}>
-        <Container />
-      </div>
-      {/* <Footer/> */}
+      <Container />
+      <Footer />
     </>
   );
 };

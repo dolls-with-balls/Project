@@ -35,13 +35,12 @@
   padding-top: 10px;
 }
 
-.uploadImagesContainer{
-  border: 1px solid red;
+.uploadImagesContainer {
   height: fit-content;
   overflow-y: scroll;
 }
 
-.uploadImg{
+.uploadImg {
   width: 20%;
   height: auto;
   margin: 1%;

@@ -6,7 +6,7 @@ import { Signup } from "./pages/Signup";
 import { NewsDetail } from "./components/NewsDetail";
 import { UserProfile } from "./components/UserProfile";
 import { DataProvider } from "./contexts/DataProvider";
-import { CreateNews } from "./components/createNews"
+import { CreateNews } from "./components/createNews";
 
 function App() {
   return (
@@ -21,7 +21,9 @@ function App() {
               <Route path=":id" element={<NewsDetail />} />
             </Route>
             <Route path="/create" element={<CreateNews />} />
-            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/profile">
+              <Route path=":id" element={<UserProfile />} />
+            </Route>
           </Routes>
         </DataProvider>
       </BrowserRouter>

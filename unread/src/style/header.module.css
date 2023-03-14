@@ -25,6 +25,15 @@
 .logo {
   height: 18px;
 }
+.dropdown {
+  margin-right: 15px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
 .headerNav {
   display: flex;
   justify-content: space-evenly;
@@ -124,26 +133,26 @@
 .ig {
   color: grey;
   margin-left: 10px;
-  height: 16px; 
-  width: 16px
+  height: 16px;
+  width: 16px;
 }
 .fb {
   color: grey;
   margin-left: 10px;
-  height: 16px; 
-  width: 16px
+  height: 16px;
+  width: 16px;
 }
 .tw {
   color: grey;
   margin-left: 10px;
-  height: 16px; 
-  width: 16px
+  height: 16px;
+  width: 16px;
 }
 .ln {
   color: grey;
   margin-left: 10px;
-  height: 16px; 
-  width: 16px
+  height: 16px;
+  width: 16px;
 }
 .fb:hover {
   color: #2c5fcd;
@@ -212,6 +221,5 @@
   .headerSearch {
     display: flex;
     justify-content: flex-end;
-
   }
 }
