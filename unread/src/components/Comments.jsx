@@ -2,18 +2,49 @@ import comment from "../assets/unread3.png";
 import style from "../style/comments.module.css";
 import { client } from "../client";
 import { Button } from "@mantine/core";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
+import { CommentCard } from "./commentCard";
 
 export const Comments = () => {
   const userName = useRef();
   const userComment = useRef();
+  const params = useParams();
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    client.get(`/getPost/${params.id}`).then((res) => {
+      setComments(res.data.comments);
+    });
+  }, [comments]);
 
   const postComment = () => {
-    client.post("/create", {
-      creator: userName.current.value,
-      text: userComment.current.value,
-    });
+    client
+      .post("/create", {
+        creator: userName.current.value,
+        text: userComment.current.value,
+      })
+      .then((res) => {
+        console.log(res.data);
+        addToPost(res);
+        setComments([...comments, res.data.comments]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+
+  const addToPost = (res) => {
+    client
+      .put("/add", {
+        postId: params.id,
+        commentId: res.data._id,
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className={style.commentSection}>
       <div className={style.title}>
@@ -22,7 +53,7 @@ export const Comments = () => {
           alt="comment"
           style={{ width: "30px", height: "30px" }}
         />
-        <h5>Сэтгэгдэл бичих (0)</h5>
+        <h5>Сэтгэгдэл бичих ({comments.length})</h5>
       </div>
 
       <div className={style.inputContainer}>
@@ -43,9 +74,16 @@ export const Comments = () => {
         variant="default"
         color="gray"
         style={{ width: "400px", color: "grey" }}
+        onClick={postComment}
       >
         Сэтгэгдэл бичих
       </Button>
+      <div className={style.commetsContainer}>
+        {comments &&
+          comments.map((item, index) => {
+            return <CommentCard {...item} key={index} />;
+          })}
+      </div>
     </div>
   );
 };

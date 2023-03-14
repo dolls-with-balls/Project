@@ -1,7 +1,6 @@
 import style from "../style/newsDetail.module.css";
 import newsImg from "../assets/unread2.png";
 import profile from "../assets/unreadp.jpeg";
-import newsImg2 from "../assets/unread2.jpg";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import { Container } from "react-bootstrap";
@@ -9,7 +8,7 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { HeaderWhite } from "./HeaderWhite";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../client";
 import { Comments } from "./Comments";
@@ -21,9 +20,8 @@ export const NewsDetail = () => {
   useEffect(() => {
     if (data)
       client
-        .get(`/post/${params.id}`)
+        .get(`/getPost/${params.id}`)
         .then((res) => {
-          console.log(res.data);
           setData(res.data);
         })
         .catch((err) => {
@@ -111,7 +109,6 @@ export const NewsDetail = () => {
               <div className={style.mainNews}>
                 <div className={style.texts}>{data && data.mainNews}</div>
               </div>
-              <img src={newsImg2} alt="newsImg2" className={style.img} />
             </div>
           </div>
         </Container>

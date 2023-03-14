@@ -23,7 +23,7 @@ export const Home = () => {
       });
 
     client
-      .get("/getPost")
+      .get("/getPosts")
       .then((res) => {
         console.log(res.data);
         setPost(res.data);
