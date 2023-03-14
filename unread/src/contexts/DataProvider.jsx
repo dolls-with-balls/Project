@@ -10,7 +10,7 @@ export const DataProvider = (props) => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    // if (localStorage.getItem("token"))
+    if (localStorage.getItem("token")) {
       client
         .get("/verify")
         .then(async (res) => {
@@ -19,6 +19,7 @@ export const DataProvider = (props) => {
         .catch((err) => {
           console.log(err);
         });
+    }
   }, []);
 
   return (

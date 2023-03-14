@@ -1,8 +1,5 @@
 import style from "../style/newsDetail.module.css";
-import newsImg from "../Assets/unread2.jpg";
 import profile from "../Assets/unreadp.jpeg";
-import newsImg2 from "../Assets/unread2.jpg";
-import comment from "../Assets/unread3.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import { Container } from "react-bootstrap";
@@ -14,6 +11,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../client";
 import { Comments } from "./Comments";
+import { Footer } from "./Footer";
 export const NewsDetail = () => {
   const params = useParams();
 
@@ -45,7 +43,11 @@ export const NewsDetail = () => {
             </div>
             <h1 className={style.title}>{data && data.title}</h1>
           </div>
-          <img src={newsImg} alt="newsImg" className={style.img} />
+          <img
+            src={data.imageUrls && data.imageUrls[0]}
+            alt="newsImg"
+            className={style.img}
+          />
 
           <div className={style.socialSection}>
             <div className={style.leftSide}>
@@ -73,12 +75,12 @@ export const NewsDetail = () => {
                   <div className={style.reviews}>
                     <div className={style.review}>
                       <VisibilityIcon />
-                      <div>420</div>
+                      <div>0</div>
                     </div>
 
                     <div className={style.review}>
                       <ChatBubbleIcon />
-                      <div>69</div>
+                      <div>{data.comments && data.comments.length}</div>
                     </div>
                   </div>
                 </div>
@@ -117,7 +119,7 @@ export const NewsDetail = () => {
         <Comments />
       </div>
 
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };

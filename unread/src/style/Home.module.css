@@ -43,7 +43,7 @@
 
 .imgContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: 446px;
   height: 446px;
   border-radius: 30px;
@@ -54,7 +54,6 @@
   border-radius: 30px;
   height: 446px;
   transition: 200ms;
-  width: 100%;
 }
 
 .img:hover {
