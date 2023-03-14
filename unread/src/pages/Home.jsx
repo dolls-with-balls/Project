@@ -1,7 +1,7 @@
 import style from "../style/Home.module.css";
-import newsImg from "../assets/unread2.png";
-import newsImg2 from "../assets/unread.png";
-import profile from "../assets/unread3.jpeg";
+import newsImg from "../Assets/unread2.png";
+import newsImg2 from "../Assets/unread.png";
+import profile from "../Assets/unread3.jpeg";
 
 export const Home = () => {
   return (
