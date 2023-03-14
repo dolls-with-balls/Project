@@ -4,28 +4,29 @@ import { IoIosText } from "react-icons/io";
 
 export const Container = () => {
   return (
-    <>
+    <div className={styles.allcard}>
       <div className={styles.cards}>
         <div className={styles.right}>
           <div className={styles.top}>
             <div className={styles.card1}>
               <div className={styles.minute}>9мин</div>
               <div className={styles.text}>
-                <div style={{ color: "#fff", opacity: 0.6, fontSize: 12 }}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
                   7 Хоногийн Тойм
                 </div>
-                <div style={{ display: "flex" }}>
-                  <h4 style={{ color: "#eee" }}>
-                    MWC-ийн сонин + ChatGPT-ийн хэрэглээ + Tesla-ийн төлөвлөгөө
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    MWC-ийн сонин + ChatGPT-ийн
                   </h4>
-                  <div
-                    style={{
-                      display: "flex",
-                      float: "right",
-                      marginTop: 50,
-                      marginRight: 10,
-                    }}
-                  >
+                  <div className={styles.icon}>
                     <AiFillEye style={{ color: "#fff", opacity: 0.6 }} />
                     <div style={{ color: "#fff", opacity: 0.6 }}>2435</div>
                   </div>
@@ -40,21 +41,141 @@ export const Container = () => {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.card2}></div>
-            <div className={styles.card3}>f</div>
+            <div className={styles.card2}>
+              <div className={styles.minute}>3мин</div>
+              <div className={styles.text}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
+                  Чөлөөт
+                </div>
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    Танилцуулах нь: Геотехникийн
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card3}>
+              <div className={styles.minute}>3мин</div>
+              <div className={styles.text}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
+                  Чөлөөт
+                </div>
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    Танилцуулах нь: Геотехникийн
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.left}>
           <div className={styles.top}>
-            <div className={styles.card4}>f</div>
-            <div className={styles.card5}>f</div>
+            <div className={styles.card4}>
+              <div className={styles.minute}>3мин</div>
+              <div className={styles.text}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
+                  Чөлөөт
+                </div>
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    Танилцуулах нь: Геотехникийн
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card5}>
+              <div className={styles.minute}>3мин</div>
+              <div className={styles.text}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
+                  Чөлөөт
+                </div>
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    Танилцуулах нь: Геотехникийн
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.card6}>f</div>
-            <div className={styles.card7}>f</div>
+            <div className={styles.card6}>
+              <div className={styles.minute}>3мин</div>
+              <div className={styles.text}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
+                  Чөлөөт
+                </div>
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    Танилцуулах нь: Геотехникийн
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div className={styles.card7}>
+              <div className={styles.minute}>3мин</div>
+              <div className={styles.text}>
+                <div
+                  style={{
+                    color: "#fff",
+                    opacity: 0.6,
+                    fontSize: 12,
+                    paddingLeft: 10,
+                    marginLeft: 10,
+                  }}
+                >
+                  Чөлөөт
+                </div>
+                <div style={{ display: "flex", paddingLeft: 10 }}>
+                  <h4 style={{ color: "#eee", margin: 10 }}>
+                    Танилцуулах нь: Геотехникийн
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
