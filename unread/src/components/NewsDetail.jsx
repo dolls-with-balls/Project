@@ -9,21 +9,21 @@ import { Container } from "react-bootstrap";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
-import { Button } from "@mantine/core";
 import { HeaderWhite } from "./HeaderWhite";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../client";
+import { Comments } from "./Comments";
 export const NewsDetail = () => {
   const params = useParams();
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (data)
       client
-        .get(`/post/${params.id}`)
+        .get(`/getPost/${params.id}`)
         .then((res) => {
-          console.log(res.data);
           setData(res.data);
         })
         .catch((err) => {
@@ -111,36 +111,10 @@ export const NewsDetail = () => {
               <div className={style.mainNews}>
                 <div className={style.texts}>{data && data.mainNews}</div>
               </div>
-              <img src={newsImg2} alt="newsImg2" className={style.img} />
             </div>
           </div>
         </Container>
-        <div className={style.commentSection}>
-          <div className={style.title}>
-            <img
-              src={comment}
-              alt="comment"
-              style={{ width: "30px", height: "30px" }}
-            />
-            <h5>Сэтгэгдэл бичих (0)</h5>
-          </div>
-
-          <div className={style.inputContainer}>
-            <input placeholder="Таны нэр" type="text" className={style.input} />
-            <textarea
-              placeholder="Санал сэтгэгдэл"
-              className={style.textArea}
-            />
-          </div>
-
-          <Button
-            variant="default"
-            color="gray"
-            style={{ width: "400px", color: "grey" }}
-          >
-            Сэтгэгдэл бичих
-          </Button>
-        </div>
+        <Comments />
       </div>
 
       {/* <Footer/> */}
