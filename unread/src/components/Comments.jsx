@@ -1,4 +1,4 @@
-import comment from "../assets/unread3.png";
+import comment from "../Assets/unread3.png";
 import style from "../style/comments.module.css";
 import { client } from "../client";
 import { Button } from "@mantine/core";
