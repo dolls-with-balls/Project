@@ -1,13 +1,13 @@
-.container{
+.container {
     /* border: 1px solid red; */
     width: 100vw;
     display: flex;
-    height: 100vh;
+    height: 2000px;
     justify-content: center;
     overflow-y: scroll;
 }
 
-.innerContainer{
+.innerContainer {
     /* border: 1px solid blue; */
     width: 73%;
     display: flex;
@@ -15,71 +15,70 @@
     overflow-y: scroll;
 }
 
-.bigPost{
+.bigPost {
     border: 1px solid green;
-    width:65%;
-    height: 34%;
+    width: 65%;
+    height: 13%;
     border-radius: 0px 30px 30px 30px;
 }
 
-.smallPostContainer{
+.smallPostContainer {
     /* border: 1px solid black; */
+    height: 300px;
     margin: 1%;
-    min-height: 30%;
-    max-height: 60%;
+    /* max-height: 60%; */
     position: relative;
     transition: 1s;
 }
 
-.postR{
+.postR {
     /* border: 1px solid blue; */
     width: 67%;
-    height:100%;
+    height: 100%;
     position: absolute;
     right: 0;
-    transition: 1s;
+    transition: 200ms;
 }
 
-.postR:hover{
-    top: -10%;
-    transition: 1s;
+.postR:hover {
+    top: -6%;
 }
 
-.postR:hover > .smallPostR{
+.postR:hover>.smallPostR {
     -moz-box-shadow: 0 0 3px black;
     -webkit-box-shadow: 0 0 3px black;
     box-shadow: 0 0 16px black;
-    transition: 1s;
+    transition: 200ms;
 }
 
-.postL{
+.postL {
     /* border: 1px solid blue; */
     width: 67%;
-    height:100%;
+    height: 100%;
     position: absolute;
     left: 0;
-    transition: 1s;
+    transition: 200ms;
 }
 
-.postL:hover > .smallPostL{
+.postL:hover>.smallPostL {
     -moz-box-shadow: 0 0 3px black;
     -webkit-box-shadow: 0 0 3px black;
     box-shadow: 0 0 16px black;
-    transition: 1s;
+    transition: 200ms;
 }
 
-.postL:hover{
-    top: -10%;
-    transition: 1s;
+.postL:hover {
+    top: -6%;
+    /* transition: 1s; */
 }
 
-.postInfoContainer{
+.postInfoContainer {
     /* border: 1px solid red; */
     height: 25%;
     position: relative;
 }
 
-.postInfoR{
+.postInfoR {
     /* border: 1px solid green; */
     height: 100%;
     width: fit-content;
@@ -90,7 +89,7 @@
     align-items: center;
 }
 
-.postInfoL{
+.postInfoL {
     /* border: 1px solid green; */
     height: 100%;
     width: fit-content;
@@ -101,7 +100,7 @@
     align-items: center;
 }
 
-.infoText{
+.infoText {
     /* border: 1px solid green; */
     height: 100%;
     min-width: 85%;
@@ -109,7 +108,7 @@
     flex-direction: column;
 }
 
-.infoImage{
+.infoImage {
     /* border: 1px solid black; */
     height: 100%;
     width: 15%;
@@ -118,13 +117,13 @@
     align-items: center
 }
 
-.profileImage{
+.profileImage {
     display: flex;
-    width:50px;
+    width: 50px;
     border-radius: 50%;
 }
 
-.profileNameR{
+.profileNameR {
     /* border: 1px solid green; */
     width: 100%;
     display: flex;
@@ -134,9 +133,9 @@
     font-size: 12px;
     height: 50%;
     align-items: center;
-} 
+}
 
-.profileNameL{
+.profileNameL {
     /* border: 1px solid green; */
     width: 100%;
     display: flex;
@@ -146,9 +145,9 @@
     font-size: 12px;
     height: 50%;
     align-items: center;
-} 
+}
 
-.infoDateContainerR{
+.infoDateContainerR {
     /* border: 1px solid green; */
     display: flex;
     justify-content: flex-end;
@@ -157,7 +156,7 @@
     font-size: 14px;
 }
 
-.infoDateContainerL{
+.infoDateContainerL {
     /* border: 1px solid green; */
     display: flex;
     justify-content: flex-start;
@@ -167,10 +166,11 @@
 }
 
 
-.smallPostR{
+.smallPostR {
     /* border: 3px solid green; */
     box-shadow: 1px;
     background-color: white;
+    /* height: 250px; */
     height: 75%;
     border-radius: 30px 0px 30px 30px;
     display: flex;
@@ -178,29 +178,32 @@
     -moz-box-shadow: 0 0 3px black;
     -webkit-box-shadow: 0 0 3px black;
     box-shadow: 0 0 3px black;
+    padding-left: 5%;
 }
 
-.smallPostL{
+.smallPostL {
     /* border: 3px solid green; */
     background-color: white;
     height: 75%;
+    /* height: 250px; */
     border-radius: 0px 30px 30px 30px;
     display: flex;
     align-items: center;
     -moz-box-shadow: 0 0 3px black;
     -webkit-box-shadow: 0 0 3px black;
-    box-shadow: 0 0 3px black;   
+    box-shadow: 0 0 3px black;
+    padding-left: 5%;
 }
 
-.smallPostDesc{
+.smallPostDesc {
     /* border: 1px solid red; */
     font-weight: bold;
     font-size: 20px;
     width: 60%;
-    margin: 5%;
+    margin: 1%;
 }
 
-.smallPostImageContainer{
+.smallPostImageContainer {
     /* border: 1px solid blue; */
     width: 25%;
     height: 100%;
@@ -209,7 +212,7 @@
     align-items: center;
 }
 
-.smallPostImage{
-    width: 75%;
+.smallPostImage {
+    width: 70%;
     border-radius: 50%;
 }
