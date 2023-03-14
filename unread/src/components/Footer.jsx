@@ -1,7 +1,7 @@
 import styles from "../style/footer.module.css";
-import logo from "../assets/logo.png";
-import apple from "../assets/apple.png";
-import samsung from "../assets/samsung.png";
+import logo from "../Assets/logo.png";
+import apple from "../Assets/apple.png";
+import samsung from "../Assets/samsung.png";
 import { AiFillFacebook } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
 import { AiOutlineInstagram } from "react-icons/ai";

@@ -42,7 +42,7 @@
 .btn {
   border-radius: 15px;
   width: 290px;
-  background-image: url(../assets/back.jpeg);
+  background-image: url(../Assets/back.jpeg);
   display: flex;
   justify-content: center;
   align-items: center;
