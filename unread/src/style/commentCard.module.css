@@ -1,0 +1,40 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 45px;
+  border-radius: 0 10px 10px 10px;
+  border: 0.5px solid rgb(150, 150, 150);
+  padding-left: 10px;
+}
+
+.name {
+  font-size: 13px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.letter {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 157, 255);
+}
+
+.profilePic {
+  width: 36px;
+  height: 36px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 120, 246, 0.2);
+}

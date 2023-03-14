@@ -6,7 +6,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { AiFillYoutube } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai"; 
 import { GrSoundcloud } from "react-icons/gr";
 
 export const Footer = () => {
