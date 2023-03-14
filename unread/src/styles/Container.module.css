@@ -1,0 +1,268 @@
+.allcard {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card1 {
+  width: 460px;
+  height: 250px;
+  background-image: url(../assets/back1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.icon{
+  display: flex;
+  float: "right";
+  margin-top: 50px;
+  margin-right: 10px
+}
+.card1:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.card2:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.card3:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.card4:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.card5:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.card6:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.card7:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  transition: 500ms;
+  box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card2 {
+  width: 220px;
+  height: 220px;
+  background-image: url(../assets/back2.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.card3 {
+  width: 220px;
+  height: 220px;
+  height: 220px;
+  background-image: url(../assets/back3.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.card4 {
+  width: 220px;
+  height: 220px;
+  height: 220px;
+  background-image: url(../assets/back4.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.card5 {
+  width: 220px;
+  height: 220px;
+  height: 220px;
+  background-image: url(../assets/back5.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.card6 {
+  width: 220px;
+  height: 250px;
+  background-image: url(../assets/back6.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.card7 {
+  width: 220px;
+  height: 250px;
+  background-image: url(../assets/back7.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 500ms;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bottom {
+  display: flex;
+  gap: 20px;
+}
+.top {
+  display: flex;
+  gap: 20px;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.minute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  backdrop-filter: blur(100px);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  right: 17px;
+  bottom: 60px;
+  z-index: 2;
+  color: #eee;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 950px) {
+  .cards{
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .card1{
+    width: 360px;
+    height: 180px;
+  }
+  .card2{
+    width: 170px;
+    height: 170px;
+  }
+  .card3{
+    width: 170px;
+    height: 170px;
+  }
+  .card4{
+    width: 170px;
+    height: 170px;
+  }
+  .card5{
+    width: 170px;
+    height: 170px;
+  }
+  .card6{
+    width: 170px;
+    height: 170px;
+  }
+  .card7{
+    width: 170px;
+    height: 170px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .top{
+    flex-direction: column;
+  }
+  .bottom{
+    flex-direction: column;
+  }
+  .card1{
+    width: 170px;
+    height: 170px;
+  }
+  .icon{
+    opacity: 0;
+  }
+  .allcard{
+
+    align-items: unset;
+  }
+}
