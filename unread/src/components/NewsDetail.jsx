@@ -1,8 +1,8 @@
 import style from "../style/newsDetail.module.css";
-import newsImg from "../assets/unread2.png";
-import profile from "../assets/unreadp.jpeg";
-import newsImg2 from "../assets/unread2.jpg";
-import comment from "../assets/unread3.png";
+import newsImg from "../Assets/unread2.png";
+import profile from "../Assets/unreadp.jpeg";
+import newsImg2 from "../Assets/unread2.jpg";
+import comment from "../Assets/unread3.png";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import { Container } from "react-bootstrap";

@@ -34,3 +34,15 @@
   justify-content: end;
   padding-top: 10px;
 }
+
+.uploadImagesContainer{
+  border: 1px solid red;
+  height: fit-content;
+  overflow-y: scroll;
+}
+
+.uploadImg{
+  width: 20%;
+  height: auto;
+  margin: 1%;
+}

@@ -1,12 +1,15 @@
 import style from "../style/Home.module.css";
-import newsImg from "../assets/unread2.png";
-import newsImg2 from "../assets/unreadHome.png";
-import profile from "../assets/unread3.jpeg";
-import { client } from "../client";
+import newsImg from "../Assets/unread2.png";
+import newsImg2 from "../Assets/unreadHome.png";
+import profile from "../Assets/unread3.jpeg";
+// import newsImg from "../Assets/unread.png";
+// import profile from "../Assets/unread3.jpeg";
 import { useContext, useEffect } from "react";
 import { DataContext } from "../contexts/DataProvider";
 import { CarouseL } from "../components/Carousel";
 import { Header } from "../components/Header";
+
+import { client } from "../client";
 
 export const Home = () => {
   const { setUser, setPost, lastPost, setLastPost, post } =
@@ -37,6 +40,7 @@ export const Home = () => {
     setLastPost([post[post.length - 1]]);
   }, [post]);
 
+  console.log(lastPost)
   return (
     <>
       <div className={style.container}>
