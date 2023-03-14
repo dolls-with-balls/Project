@@ -1,7 +1,9 @@
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  gap: 100px;
   background-color: rgb(0, 0, 0);
   height: 100vh;
   width: 100%;
@@ -20,7 +22,6 @@
 }
 
 .gradient {
-  height: 20vh;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -35,10 +36,9 @@
 
 .innerContainer {
   display: flex;
-  position: absolute;
   margin-bottom: 200px;
   gap: 50px;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .imgContainer {
@@ -169,4 +169,9 @@
   .title2 {
     font-size: 28px;
   }
+}
+
+.carouselContainer {
+  display: flex;
+  width: 100%;
 }
